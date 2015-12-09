@@ -6,15 +6,14 @@ Some plotting for AAD - more to come.
 
 - scripts dir has all the src
 - test dir has all the tests and the data to do the tests
-- runtime is the working directory where stuff heppens.
+- runtime is the working directory where stuff happens.
 - doc dir has a document that talks bout what this is.
-- data dir has all the data needed ot make this run, eg climatologies and other stuff.
+- data dir has all the data needed to make this run, eg climatologies and other stuff.
 
 
 ## Installation
 
 TODO: Describe the installation process
-das_tests](https://gitlab.bom.gov.au/eReefs/seadas_tests)
 
 ## Usage
 
