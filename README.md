@@ -2,6 +2,12 @@
 
 TODO: Write a project description
 
+How to get the ship position:
+http://www.aishub.net/xml-description-20.php
+http://www.aishub.net/ships?search=Aurora+Australis
+http://www.marinetraffic.com/en/ais/index/positions/all/shipid:694307/mmsi:503043000/shipname:AURORA%20AUSTRALIS
+
+
 Some plotting for AAD - more to come.
 
 - scripts dir has all the src
