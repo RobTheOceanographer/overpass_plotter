@@ -16,10 +16,12 @@
 ######################################################################
 ## DECLARE YOUR SHIPS POSITION HERE.
 ######################################################################
-SHIPLAT=-44.48864
-SHIPLON=145.9136
+SHIPLAT=-44.74298
+SHIPLON=145.5313
 
-#TODO: Need to get the ship position from somewhere else - command line?
+  # -44.74298 / 145.5313
+
+# TODO: Need to get the ship position from somewhere else - command line?
 
 ######################################################################
 ## DECLARE YOUR MAP VARIABLES HERE.
@@ -31,10 +33,6 @@ CENTLAT=$SHIPLAT
 # set up the spatial boundaries of each corner of the plot:
 LONMIN=$(echo $SHIPLON-20 | bc) ; LONMAX=$(echo $SHIPLON+15 | bc) # Longitude range of plots
 LATMIN=$(echo $SHIPLAT-10 | bc)  ; LATMAX=$(echo $SHIPLAT+10 | bc) # Latitude range of plots
-
-echo $LATMAX
-echo $LATMIN
-
 
 # set the filename.
 OUTFILE='mymap.eps'                 # Output file
@@ -60,7 +58,9 @@ pscoast -R$LONMIN/$LATMIN/$LONMAX/$LATMAX'r' -JA$CENTLON/$CENTLAT/3i -Bag5 -Di -
 # command variables -O >> map3.eps
 psxy text.xy -R -J -SS0.1 -Gred -O -K >> map3.eps
 
+#Add some text to the bottom of the figure.
 pstext text2.xy -R -J -N -O >> map3.eps
+
 #echo $(130,-60,$DATE) | pstext -R -J -N -O >> map3.eps
 
 ######################################################################
@@ -68,6 +68,5 @@ pstext text2.xy -R -J -N -O >> map3.eps
 ######################################################################
 # convert to png and crop while we're at it.
 psconvert -A1 -Tg map3.eps
-
 
 exit 0
